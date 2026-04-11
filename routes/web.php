@@ -23,16 +23,7 @@ Route::post('/logout', [AuthController::class, 'logout'])
 Route::middleware(['auth'])->group(function () {
 
     // Middleware para resolver la empresa activa en cada request
-    Route::middleware(function ($request, $next) {
-        $user = $request->user();
-        if ($user && $user->active_company_id) {
-            $company = $user->activeCompany;
-            if ($company) {
-                app()->instance('activeCompany', $company);
-            }
-        }
-        return $next($request);
-    })->group(function () {
+    Route::middleware([\App\Http\Middleware\SetActiveCompany::class])->group(function () {
 
         // Dashboard: redirigir al dashboard de la empresa activa
         Route::get('/', function () {
