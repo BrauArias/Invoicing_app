@@ -109,6 +109,12 @@
                             <td class="label">Fecha</td>
                             <td class="val">{{ \Carbon\Carbon::parse($invoice->issue_date)->format('d.m.Y') }}</td>
                         </tr>
+                        @if($invoice->service_date && $invoice->service_date->format('Y-m-d') !== $invoice->issue_date->format('Y-m-d'))
+                        <tr>
+                            <td class="label">F. Operación</td>
+                            <td class="val">{{ \Carbon\Carbon::parse($invoice->service_date)->format('d.m.Y') }}</td>
+                        </tr>
+                        @endif
                         @if($invoice->due_date)
                         <tr>
                             <td class="label">Vence</td>

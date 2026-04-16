@@ -21,7 +21,7 @@ class HandleInertiaRequests extends Middleware
         $companies = [];
 
         if ($user) {
-            $companies = $user->companies()->orderBy('name')->get(['id', 'name', 'logo_path', 'invoice_series']);
+            $companies = $user->companies()->orderBy('name')->get(['companies.id', 'companies.name', 'companies.logo_path', 'companies.invoice_series']);
             $activeCompany = $user->activeCompany;
         }
 
