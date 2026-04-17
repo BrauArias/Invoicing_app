@@ -66,11 +66,11 @@ Write-Host "→ Subiendo landing al tema..." -ForegroundColor White
 $htmlSrc2 = Join-Path $DEPLOY_DIR "public\powerhelp-landing.html"
 Ftp-Upload $htmlSrc2 "www/wp-content/themes/extendable/powerhelp-landing.html"
 
-# 3. settingdemo.html → www/settingdemo.html (panel de admin)
+# 3. settings.html → www/settings.html (panel de admin)
 Write-Host ""
 Write-Host "→ Subiendo panel de admin..." -ForegroundColor White
-$demoDst = Join-Path $DEPLOY_DIR "public\settingdemo.html"
-Ftp-Upload $demoDst "www/settingdemo.html"
+$demoDst = Join-Path $DEPLOY_DIR "public\settingdemo.html" # El archivo fisico se puede llamar igual, pero el destino cambia
+Ftp-Upload $demoDst "www/settings.html"
 
 # 4. landing HTML → www/index.html  (landing page real)
 Write-Host ""
