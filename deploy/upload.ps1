@@ -4,7 +4,7 @@
 
 $FTP_HOST = "poweyb.ftp.tb-hosting.com"
 $FTP_USER = "powerhelpes@powerhelpes"
-$FTP_PASS = "RS1kFpcTjQdAWYIz"
+$FTP_PASS = "YOUR_FTP_PASSWORD"
 $FTP_BASE = "ftp://$FTP_HOST"
 
 $APP_ROOT   = Split-Path -Parent $PSScriptRoot
@@ -211,4 +211,4 @@ Write-Host "  3. Pulsa 'Cargar Datos Demo'" -ForegroundColor Cyan
 Write-Host "  4. Borra setup.php" -ForegroundColor Cyan
 Write-Host "  5. Login en: https://powerhelp.es/factura" -ForegroundColor Cyan
 Write-Host "     Email:    admin@powerhelp.es" -ForegroundColor White
-Write-Host "     Password: Secreto123!" -ForegroundColor White
+Write-Host "     Password: YOUR_ADMIN_PASSWORD" -ForegroundColor White

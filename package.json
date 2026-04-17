@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "rm -rf public/build && vite build"
     },
     "dependencies": {
         "@inertiajs/react": "^2.0",
